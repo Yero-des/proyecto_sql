@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titulo }}</title>
+</head>
+<body>
+    <h2>{{ titulo }}</h2>
+
+    <form action="{% url 'empleado:create' %}" method="post">
+        
+        {% csrf_token %}
+        Nombre:
+        <input type="text" name="nombre" maxlength="50"><br>
+        Marca:
+        <select name="marca">
+            <option value="Samsung">Samsung</option>
+            <option value="Huawei">Huawei</option>
+            <option value="Iphone">Iphone</option>
+        </select><br>
+        Procesador:
+        <select name="procesador">
+            <option value="Intel">Samsung</option>
+            <option value="AMD">Huawei</option>
+        </select><br>
+        RAM (GB):
+        <input type="number" name="ram" maxlength="50"><br>
+        ROM (GB):
+        <input type="number" name="rom" maxlength="50"><br>
+        <!-- Boton enviar  -->
+        <input type="submit" name="submit" value="Enviar">
+
+    </form>
+    
+</body>
+</html>
