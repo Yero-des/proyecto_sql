@@ -1,0 +1,29 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>{% block title %}{% endblock title %}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    {% comment %} BootStrap SCSS {% endcomment %}
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+  </head>
+
+  <body>
+    <header>
+      <!-- place navbar here -->
+    </header>
+    <main>
+
+      {% block content %}{% endblock content %}
+
+    </main>
+    <footer>
+      <!-- place footer here -->
+    </footer>
+
+
+  </body>
+</html>
